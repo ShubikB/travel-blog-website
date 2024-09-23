@@ -44,12 +44,69 @@ html{
     margin:5px;
 }
 .welcomeContainer{
-    display:flex;
-    justify-content: center;
-    align-self: center;
-    width: auto;
+  display: grid;
+  grid-template-columns: 100px 200px 100px 400px;
+  grid-template-rows: 100px 100px 100px 100px;
+  width:900px;
+  background-color: beige;
+  gap:10px; /* gap for both column and row*/
 
 }
+
+#child1 {
+    grid-column-start: 1;
+    background-color: rgb(52, 143, 110);
+    grid-column-end: 3;
+    width: auto ;
+    height: auto;
+    border-radius: 5px;
+    text-align: center;
+
+}
+#child2{
+    grid-column-start: 3;
+    grid-column-end:5;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    border-radius: 5px;
+    text-align: center;
+
+    background-color:burlywood;
+}
+#child3{
+    grid-column-start:3;
+    grid-column-end:5;
+    grid-row-start:3;
+    grid-row-end:5;
+    border-radius: 5px;
+    text-align: center;
+    background-color: darkslategray;
+}
+
+/* .welcomeContainer img{
+    display:;
+    object-fit:fill;
+    width: 100%;
+} */
+
+
+.body{
+    display:gird;
+    grid-template-columns: (12, 1fr);
+    grid-template-rows: (12, 1fr);
+    column-gap: 5px;
+
+}
+.header{
+    background-color: red;
+    grid-column-start:1;
+    grid-row-start: 1 ;
+    grid-column-end: 12;
+    grid-row-end:10;
+
+
+}
+
 
 @media only screen and ( max-width:800px ) {
     #notificationBar { 
